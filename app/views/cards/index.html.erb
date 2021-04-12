@@ -1,0 +1,20 @@
+<div class="panel" xmlns="http://www.w3.org/1999/html">
+  <%= link_to 'Новое слово', new_card_path %>
+    <div class="card">
+      <div class="english_word">
+        <%= @card.eng %>
+      </div>
+      <details onclick="hide('trans')">
+        <summary id="trans">
+          Показать перевод
+        </summary>
+        <%= @card.answer.word %>
+      </details>
+        <span class="answer">
+          <%= link_to 'Помню', update_card_path(@card.id, 1) %>
+        </span>
+        <span class="answer">
+          <%= link_to 'Не помню', update_card_path(@card.id, 2) %>
+        </span>
+  </div>
+  </div>

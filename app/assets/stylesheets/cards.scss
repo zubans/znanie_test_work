@@ -1,0 +1,55 @@
+body {
+  background: #999999;
+}
+
+.panel {
+  background: #666666;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 450px;
+  height: 450px;
+
+  .card {
+    position: relative;
+    background: #730E15;
+    padding: 3px;
+    width: 90%;
+    height: 90%;
+  }
+}
+
+.english_word {
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  padding-top: 30%;
+}
+
+.russian_word {
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.answer {
+  font-weight: bold;
+  font-size: 3em;
+}
+
+details {
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  cursor: pointer;
+}
+
+//todo классы для скрытия слова Перевод при нажатии. Исправить через JS
+summary::-webkit-details-marker {
+  display: none
+}
+
+summary::after {
+  display:none
+}

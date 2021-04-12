@@ -1,0 +1,11 @@
+<%= form_with model: @card do |c| %>
+
+  <%= c.label :eng , "Английское слово" %>
+  <%= c.text_field :eng, class: "input_word", required: true %>
+
+  <%= c.fields_for :answer, @card.build_answer do |answer| %>
+    <%= answer.text_field :word, class: "input_word", required: true %>
+  <% end %>
+
+  <%= c.submit "Добавить слово", class: "btn", id:"submit" %>
+<% end %>
